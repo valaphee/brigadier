@@ -175,7 +175,7 @@ public class StringReader implements ImmutableStringReader {
     }
 
     public static boolean isAllowedInUnquotedStringRelaxed(final char c) {
-        return c != ' ' && c != '\\' && c != '"';
+        return c != ' ' && c != '\\' && !isQuotedStringStart(c);
     }
 
     public String readUnquotedString() {
