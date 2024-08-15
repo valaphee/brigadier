@@ -21,7 +21,7 @@ public class StringArgumentType implements ArgumentType<String> {
         return new StringArgumentType(StringType.SINGLE_WORD);
     }
 
-    public static StringArgumentType wordRelaxed() {
+    public static StringArgumentType relaxedWord() {
         return new StringArgumentType(StringType.SINGLE_WORD_RELAXED);
     }
 

@@ -33,10 +33,10 @@ public class StringArgumentTypeTest {
     }
 
     @Test
-    public void testParseWordRelaxed() throws Exception {
+    public void testParseRelaxedWord() throws Exception {
         final StringReader reader = mock(StringReader.class);
         when(reader.readUnquotedStringRelaxed()).thenReturn("héllo");
-        assertThat(wordRelaxed().parse(reader), equalTo("héllo"));
+        assertThat(relaxedWord().parse(reader), equalTo("héllo"));
         verify(reader).readUnquotedStringRelaxed();
     }
 
